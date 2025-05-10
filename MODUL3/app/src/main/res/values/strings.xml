@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name"> My Watchlist</string>
+    <string name="title_home">Drama List</string>
+    <string name="title_detail">Detail Drama</string>
+    <string name="button_back">Back</string>
+    <string name="watch_here">Watch Now</string>
+    <string name="detail_image">Poster drama</string>
+</resources>
