@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="drama"
+            type="com.example.modul4.Drama" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".DetailFragment">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal">
+
+            <ImageView
+                android:id="@+id/detail_image"
+                android:layout_width="match_parent"
+                android:layout_height="500dp"
+                android:scaleType="centerCrop"
+                android:contentDescription="@string/detail_image"
+                app:imageUrl="@{drama.imageUrl}" />
+
+            <TextView
+                android:id="@+id/title_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{drama.title}"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:paddingTop="8dp"
+                android:layout_gravity="center_horizontal"/>
+
+            <TextView
+                android:id="@+id/year_genre_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{drama.yearGenre}"
+                android:textSize="16sp"
+                android:paddingTop="4dp"
+                android:layout_gravity="center_horizontal"/>
+
+            <TextView
+                android:id="@+id/rating_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{drama.rating}"
+                android:textSize="16sp"
+                android:paddingTop="4dp"
+                android:layout_gravity="center_horizontal"/>
+
+            <TextView
+                android:id="@+id/episodes_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{drama.episodes}"
+                android:textSize="16sp"
+                android:paddingTop="4dp"
+                android:layout_gravity="center_horizontal"/>
+
+            <Button
+                android:id="@+id/openLinkButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/watch_here"
+                android:layout_marginTop="16dp"
+                android:layout_gravity="center_horizontal" />
+
+            <Button
+                android:id="@+id/backButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/button_back"
+                android:layout_marginTop="16dp"
+                android:layout_gravity="center_horizontal"/>
+        </LinearLayout>
+    </ScrollView>
+</layout>
